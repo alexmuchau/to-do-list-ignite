@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-left: 22rem; 
+  margin-right: 22rem; 
+}
+
+.counterContainer {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.counterContainer h4 {
+  color: var(--blue);
+}
+
+header {
+  display: inline-flex;
+  justify-content: space-between;
+}
