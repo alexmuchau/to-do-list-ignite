@@ -1,4 +1,12 @@
 .container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+}
+
+.tasksContainer {
   margin-top: 4rem;
   display: flex;
   justify-content: center;

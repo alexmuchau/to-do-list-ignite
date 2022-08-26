@@ -4,12 +4,12 @@ import { Tasks } from './Components/Tasks'
 
 export function App() {
   return (
-    <>
+    <div className={styles.container} >
       <Header />
-      <div className={styles.container}>
+      <div className={styles.tasksContainer}>
         <Tasks />
       </div>
-    </>
+    </div>
   )
     
 }

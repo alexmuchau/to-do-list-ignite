@@ -6,9 +6,11 @@ import { PlusCircle } from 'phosphor-react'
 export function Header() {
   return(
     <header className={styles.header}>
-      <img src={todoLogo} alt="todo list logo" />
+      <div className={styles.todoLogo}>
+        <img src={todoLogo} alt="todo list logo" />
+      </div>
       <div className={styles.addInput} >
-        <input type="text" placeholder="Adicione uma nova Tarefa" />
+        <input type="text" placeholder="Adicione uma nova Tarefa"/>
         <button type="submit">
           Criar
           <PlusCircle size={20}/>
