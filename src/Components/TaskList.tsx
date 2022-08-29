@@ -1,45 +1,39 @@
 import styles from './TaskList.module.css'
 import { Trash, Check } from 'phosphor-react'
 
-export function TaskList() {
+export interface TaskProps {
+  id: Number,
+  content: string,
+  completed: boolean,
+  onCheck: (id: Number) => void,
+  onDelete: (id: Number) => void
+}
+
+export function TaskList({ id , onCheck, onDelete, content, completed }: TaskProps) {  
+  function handleCheckTask() {
+    onCheck(id)
+  }
+
+  function onDeleteTask() {
+    onDelete(id)
+  }
+  
   return(
-    <ul className={styles.ulContainer}>
-      <li>
-        <div>
-          <button type="button">
-            <Check className={styles.check} size={12} />
-          </button>
-          <p>Que vai ta escrito muita coisa Que vai ta escrito muita coisa Que vai ta escrito muita coisa </p>
-        </div>
-        <Trash className={styles.trash} size={16} />
+    <li>
+      <div >
+        <label className={styles.labelContainer} >
+          <input
+            className={styles.checkboxInput}
+            type="checkbox"
+            readOnly
+            checked={completed}
+            onClick={handleCheckTask}
+          />
+          {/* <span className="checkmark"></span> */}
+          <p className={completed ? 'completed' : ''} >{content}</p>
+        </label>
+      </div>
+      <Trash className={styles.trash} size={16} onClick={onDeleteTask} />
       </li>
-      <li>
-        <div>
-          <button type="button">
-            <Check className={styles.check} size={12} />
-          </button>
-          <p>Que vai ta escrito muita coisa Que vai ta escrito muita coisa Que vai ta escrito muita coisa </p>
-        </div>
-        <Trash className={styles.trash} size={16} />
-      </li>
-      <li>
-        <div>
-          <button type="button">
-            <Check className={styles.check} size={12} />
-          </button>
-          <p>Que vai ta escrito muita coisa Que vai ta escrito muita coisa Que vai ta escrito muita coisa </p>
-        </div>
-        <Trash className={styles.trash} size={16} />
-      </li>
-      <li>
-        <div>
-          <button type="button">
-            <Check className={styles.check} size={12} />
-          </button>
-          <p>Que vai ta escrito muita coisa Que vai ta escrito muita coisa Que vai ta escrito muita coisa </p>
-        </div>
-        <Trash className={styles.trash} size={16} />
-      </li>  
-    </ul>
   )
 }

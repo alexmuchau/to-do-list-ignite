@@ -1,15 +1,67 @@
+/*-----------CreateTaskInput----------- */
+form.addInput {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: -1.68rem;
+}
+
+form.addInput textarea {
+  width: 100%;
+  height: 100%;
+
+  resize: none;
+
+  color: var(--gray-100);
+  
+  border-radius: 8px;
+  border: solid 1px var(--gray-700);
+  background-color: var(--gray-500);
+  color: var(--gray-300);
+
+  padding-left: 1rem;
+  padding-top: 1rem;
+  /* padding-bottom: 1rem; */
+}
+
+form.addInput textarea[placeholder] {
+  color: var(--gray-300);
+}
+
+form.addInput button {
+  display: inline-flex;
+  border-radius: 8px;
+  align-items: center;
+  gap: 0.4rem;
+  border: solid 1px var(--gray-700);
+
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--gray-100);
+
+  background-color: var(--blue-dark);
+  padding: 1rem;
+  transition: opacity 0.2s;
+
+  cursor: pointer;
+}
+
+form.addInput button:hover {
+  opacity: 0.8;
+}
+
+
 .container {
+  width: 100%;
+  height: 100%;
+
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-
-  padding-left: 22rem; 
-  padding-right: 22rem; 
-
-  width: 100%;
-  height: 100%;
+  margin-top: 4rem;
 }
 
+
+/*-----------TaskList Header----------- */
 .counterContainer {
   display: flex;
   gap: 0.5rem;
@@ -40,4 +92,20 @@
 header {
   display: inline-flex;
   justify-content: space-between;
+}
+
+/*-----------TaskList----------- */
+.taskListContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.ulContainer {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.75rem;
 }
