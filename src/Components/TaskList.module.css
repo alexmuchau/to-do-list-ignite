@@ -39,23 +39,26 @@ li label {
   border-color: var(--purple);
 }
 
-.checkboxInput[checked] {
+.checkboxInput:checked {
   background-color: var(--purple);
   border-color: var(--purple);
 }
 
-.checkboxInput[checked]:hover {
+.checkboxInput:checked:hover {
   opacity: 0.7;
 }
 
-li label p {
-  color: var(--gray-100);
-  font-size: 0.875rem;
+li div label p ~ input.checkboxInput:checked {
+  text-decoration: line-through;
+  color: var(--gray-300);
 }
 
-li label p.completed {
-  text-decoration:line-through;
-  opacity: 0.6;
+li div label p {
+  /* text-decoration:line-through; */
+  color: var(--gray-100);
+  font-size: 0.875rem;
+
+  cursor: pointer;
 }
 
 
