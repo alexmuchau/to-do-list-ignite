@@ -30,7 +30,7 @@ export function TaskList({ id , onCheck, onDelete, content, completed }: TaskPro
             onClick={handleCheckTask}
           />
           {/* <span className="checkmark"></span> */}
-          <p>{content}</p>
+          <p className={`${completed ? 'completed' : ''}`} >{content}</p>
         </label>
       </div>
       <Trash className={styles.trash} size={16} onClick={onDeleteTask} />

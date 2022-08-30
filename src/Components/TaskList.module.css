@@ -48,7 +48,7 @@ li label {
   opacity: 0.7;
 }
 
-li div label p ~ input.checkboxInput:checked {
+p.completed {
   text-decoration: line-through;
   color: var(--gray-300);
 }
