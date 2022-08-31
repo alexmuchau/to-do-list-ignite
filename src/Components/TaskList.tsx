@@ -1,5 +1,5 @@
 import styles from './TaskList.module.css'
-import { Trash } from 'phosphor-react'
+import { Trash, Check } from 'phosphor-react'
 
 export interface TaskProps {
   id: Number,
@@ -29,8 +29,8 @@ export function TaskList({ id , onCheck, onDelete, content, completed }: TaskPro
             checked={completed}
             onClick={handleCheckTask}
           />
-          {/* <span className="checkmark"></span> */}
-          <p className={`${completed ? 'completed' : ''}`} >{content}</p>
+          <span className="checkmark"><Check className={styles.check} weight="bold" /></span>
+          <p className={`${completed ? styles.completed : ''}`} >{content}</p>
         </label>
       </div>
       <Trash className={styles.trash} size={16} onClick={onDeleteTask} />
