@@ -5,10 +5,12 @@ I think that everyones that are starting to coding with JS, TS and ReactJS needs
 
 This is a challenge from the new modules on Ignite - ReactJS.
 
-<p align="center" >
+## Some app images
+
+<p >
   <img src="src/assets/toReadMe/checking.gif" />
 </p>
 
-<p align="center" >
+<p >
   <img src="src/assets/toReadMe/addAndDeleting.gif" />
 </p>
